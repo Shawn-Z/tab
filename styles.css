@@ -1,0 +1,217 @@
+h1, h2, h3, p {
+    display: block;
+    font-size: inherit;
+    -webkit-margin-before: 0em;
+            margin-block-start: 0em;
+    -webkit-margin-after: 0em;
+            margin-block-end: 0em;
+    -webkit-margin-start: 0px;
+            margin-inline-start: 0px;
+    -webkit-margin-end: 0px;
+            margin-inline-end: 0px;
+    font-weight: normal; }
+  
+  body {
+    font-family: 'open sans', 'sans-serif';
+    margin: 0px; }
+  
+  .container {
+    margin: 20px auto; }
+  
+  .tabPanel {
+    position:relative;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0 auto;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 46px; }
+    .tabPanel .tab {
+      width: 33%;
+      height: 46px;
+      font-weight: bold;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      margin: -1px 0 0 -1px;
+      border-bottom: 2px solid lightgrey; 
+    }
+    .tabPanel .tab p {
+      position: relative;
+      font-size: 23px;
+      color: #9e9e9e;
+      height: 46px;}
+    .tabPanel .tab:hover p {
+      height: 46px;
+      color: #4185c1;
+      cursor: pointer; }
+    .tabPanel .tab.tab-active p { 
+      height: 46px;
+      color: #0c0c0c;}
+    .tabPanel .tab:hover p {
+      height: 46px;
+      color: #4185c1;
+      cursor: pointer;}
+  .tabBody .tab-ui {
+    display: none; }
+    .tabBody .tab-ui.tab-active {
+      display: block; }
+    .tabBody .tab-ui .tab-mobile-title {
+      display: none; }
+    .tabBody .tab-ui .tab-description {
+      font-size: 13px;
+      text-align: center; }
+      .tabBody .tab-ui .tab-description .materials {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
+        width: 420px;
+        text-align: center;
+        margin: auto; }
+        .tabBody .tab-ui .tab-description .materials p {
+          display: block;
+          -webkit-margin-before: 0em;
+                  margin-block-start: 0em;
+          -webkit-margin-after: 0em;
+                  margin-block-end: 0em;
+          -webkit-margin-start: 0px;
+                  margin-inline-start: 0px;
+          -webkit-margin-end: 0px;
+                  margin-inline-end: 0px; }
+          .tabBody .tab-ui .tab-description .materials p.percentage {
+            font-size: 35px;
+            line-height: 1; }
+          .tabBody .tab-ui .tab-description .materials p.unit {
+            font-size: 15px; }
+      .tabBody .tab-ui .tab-description .lineHolder {
+        width: 45px;
+        border-top: 1px solid #000000;
+        margin: 30px auto;
+        right: -10px;
+        position: relative; }
+  
+  @media (max-width: 1200px) {
+    .container {
+      margin: 0px auto; }
+    .tabPanel {
+      display: none; }
+    .tabBody .tab-ui {
+      width: 100%;
+      display: block;
+      border-bottom: 2px solid black; }
+      .tabBody .tab-ui:last-child {
+        border-bottom: none; }
+      .tabBody .tab-ui .tab-mobile-title {
+        text-align: left;
+        padding: 10px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        padding: 14px 16px; }
+        .tabBody .tab-ui .tab-mobile-title h2 {
+          font-size: 14px;
+          font-weight: bold;
+          text-transform: uppercase; }
+        .tabBody .tab-ui .tab-mobile-title .sign {
+          position: relative;
+          width: 10px;
+          height: 10px;
+          /* Vertical line */
+          /* horizontal line */ }
+          .tabBody .tab-ui .tab-mobile-title .sign:before, .tabBody .tab-ui .tab-mobile-title .sign:after {
+            content: "";
+            position: absolute;
+            background-color: black;
+            -webkit-transition: -webkit-transform 0.25s ease-out;
+            transition: -webkit-transform 0.25s ease-out;
+            transition: transform 0.25s ease-out;
+            transition: transform 0.25s ease-out, -webkit-transform 0.25s ease-out; }
+          .tabBody .tab-ui .tab-mobile-title .sign:before {
+            top: 1px;
+            left: 50%;
+            width: 1px;
+            height: 100%;
+            margin-left: 0px; }
+          .tabBody .tab-ui .tab-mobile-title .sign:after {
+            top: 50%;
+            left: 0px;
+            width: 100%;
+            height: 1px;
+            margin-top: 0px; }
+          .tabBody .tab-ui .tab-mobile-title .sign:hover {
+            cursor: pointer; }
+            .tabBody .tab-ui .tab-mobile-title .sign:hover:before {
+              -webkit-transform: rotate(90deg);
+                      transform: rotate(90deg); }
+            .tabBody .tab-ui .tab-mobile-title .sign:hover:after {
+              -webkit-transform: rotate(180deg);
+                      transform: rotate(180deg); }
+      .tabBody .tab-ui .tab-description {
+        display: none;
+        padding: 10px; }
+        .tabBody .tab-ui .tab-description .materials {
+          width: 100%; }
+      .tabBody .tab-ui.tab-active .sign:before {
+        -webkit-transform: rotate(90deg);
+                transform: rotate(90deg); }
+      .tabBody .tab-ui.tab-active .sign:after {
+        -webkit-transform: rotate(180deg);
+                transform: rotate(180deg); }
+      .tabBody .tab-ui.tab-active .tab-description {
+        display: block;
+        -webkit-animation: fadeInFromNone 0.5s ease-out;
+                animation: fadeInFromNone 0.5s ease-out; } }
+  
+  @-webkit-keyframes fadeInFromNone {
+    0% {
+      display: none;
+      opacity: 0; }
+    1% {
+      display: block;
+      opacity: 0; }
+    100% {
+      display: block;
+      opacity: 1; } }
+  
+  @keyframes fadeInFromNone {
+    0% {
+      display: none;
+      opacity: 0; }
+    1% {
+      display: block;
+      opacity: 0; }
+    100% {
+      display: block;
+      opacity: 1; } }
+  
+
+
+.slider {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #000000;
+  width: auto;
+  height: 2px;
+  transition: all 0.3s ease;
+}
